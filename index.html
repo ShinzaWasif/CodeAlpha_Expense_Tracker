@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="trackerApp">
+        <h1 id="mainHeading">Expense Tracker</h1>
+
+        <!-- Display bar of Income and Expense -->
+        <div id="displayData">
+            <div id="dashboard">
+                <h3>Financial Health Dashboard</h3>
+            </div>
+            <div id="dashboardInfo">
+                <div id="income" class="Data">
+                    <h3 class="heading">Income:</h3>
+                    <h4 id="incomeAmount">$ 0</h4>
+                </div>
+
+                <div id="expense" class="Data">
+                    <h3 class="heading">Expense:</h3>
+                    <h4 id="expenseAmount">$ 0</h4>
+                </div>
+
+                <div class="Data" id="totalDisplay">
+                    <h3 class="heading">Remaining Balance:</h3>
+                    <h4 id="totalAmount">$ 0</h4>
+                </div>
+
+                <div class="Data" id="deficit">
+                    <h3 class="heading">Budget Deficit:</h3>
+                    <h4 id="deficitAmount">$ 0</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="selectionArea">
+
+            <div id="inputType">
+                <label for="inputTypes">Choose type</label>
+                <select name="Type" id="type">
+                    <option value="Income">Income</option>
+                    <option value="Expense">Expense</option>
+                </select>
+            </div>
+
+            <div id="category">
+                <label for="Category">Enter Category</label>
+                <input type="text" id="categoryInput" required>
+            </div>
+
+
+            <div id="amount">
+                <label for="moneyInput">Enter Amount</label>
+                <input type="number" id="moneyInput" min="0.01" step="0.01" required>
+            </div>
+
+            <div id="btnDiv">
+                <button type="submit" onclick="addTransaction()" id="addBtn">Add Item</button>
+            </div>
+
+        </div>
+
+        <!-- Record List -->
+
+        <div id="itemsList">
+            <ul id="items">
+            </ul>
+            <div id="status"></div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

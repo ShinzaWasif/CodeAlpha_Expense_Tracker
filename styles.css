@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+:root {
+    --mainClr: rgb(147, 223, 60);
+    --contrast: rgb(235, 255, 206);
+}
+
+body {
+    font-size: 3rem;
+}
+
+.trackerApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mainHeading {
+    font-family: 'Madimi One';
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+
+}
+
+#displayData {
+    display: flex;
+    width: 50%;
+    border: 0.2rem solid var(--mainClr);
+    flex-direction: column;
+}
+
+#dashboard {
+    width: 100%;
+    text-align: center;
+    background: var(--mainClr);
+}
+
+#dashboardInfo {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.Data {
+    background-color: rgb(218, 249, 172);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12rem;
+}
+
+
+
+.Data h3 {
+    margin-bottom: 0;
+    background-color: var(--mainClr);
+    padding: 0.7rem;
+    border-radius: 1.5rem;
+    width: 98;
+}
+
+#income {
+    width: 20%;
+    margin-right: 1rem;
+    border-radius: 1.5rem;
+}
+
+
+#expense {
+    width: 20%;
+    margin-right: 1rem;
+    border-radius: 1.5rem;
+}
+
+#totalDisplay {
+    width: 30%;
+    border-radius: 1.5rem;
+    margin-right: 1rem;
+}
+
+#deficit {
+    width: 30%;
+    border-radius: 1.5rem;
+}
+
+.Data #incomeAmount {
+    color: green;
+}
+
+.Data #expenseAmount {
+    color: brown;
+}
+
+.Data #totalAmount {
+    color: blue;
+}
+
+.Data h4 {
+    border-bottom: 0.3rem solid black;
+}
+
+
+#selectionArea {
+    display: flex;
+    width: 50%;
+    margin-top: 3rem;
+    border: 0.2rem solid var(--mainClr);
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+#selectionArea div {
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5rem;
+}
+
+#selectionArea label {
+    height: 5rem;
+    background-color: var(--mainClr);
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+
+#inputType {
+    width: 22%;
+    height: auto;
+}
+
+#inputType label {
+    padding-top: 1.2rem;
+}
+
+#inputType select {
+    width: 100%;
+    height: 6rem;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+#selectionArea #category {
+    width: 35%;
+}
+
+#category input {
+    width: 98%;
+    height: 5.5rem;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+#category label {
+    padding-top: 1.2rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+#amount {
+    width: 22%;
+}
+
+#amount label {
+    padding-top: 1.2rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+#amount input {
+    width: 97%;
+    height: 5.5rem;
+    text-align: center;
+    font-size: 3rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+#btnDiv {
+    width: 20%;
+    margin-left: auto;
+    padding-top: 1.5rem;
+}
+
+#addBtn {
+    margin-top: 0.5rem;
+    background: var(--mainClr);
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+#addBtn:hover,
+.delBtn:hover,
+.editBtn:hover {
+    transform: scale(0.9)
+}
+
+#itemsList {
+    width: 50%;
+    margin-top: 3rem;
+    padding-right: 0.6rem;
+    background-color: var(--mainClr);
+    border: 0.1rem solid beige;
+    border-radius: 2rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+#items {
+    list-style-type: none;
+}
+
+#items li {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.5rem;
+    width: 100%;
+
+}
+
+
+#items li .box1 {
+    background-color: rgb(218, 249, 172);
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#items li .box1 div {
+    width: 20rem;
+    word-wrap: break-word;
+}
+
+#items li .box2 {
+    display: none;
+}
+
+.incomeType {
+    color: green;
+}
+
+.expenseType {
+    color: brown;
+}
+
+
+.delBtn button,
+.editBtn button {
+    margin-top: 0.5rem;
+    color: white;
+    width: 100%;
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.editBtn {
+    margin-right: 1.5rem;
+}
+
+.editBtn,
+.delBtn {
+    width: 45%;
+}
+
+.delBtn button {
+    background-color: red;
+}
+
+.editBtn button {
+    background-color: blue;
+}
+
+#items li:hover {
+    transform: scale(1.06);
+}
+
+#items li:hover .box2 {
+    display: flex;
+    align-items: center;
+    width: 29%;
+}
+
+#items li:hover .box1 {
+    width: 65%;
+}
+
+.edit-name,
+.edit-amount,
+.edit-type {
+    margin-top: 1rem;
+    width: 16rem;
+    height: 4rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+@media (max-width:1600px) {
+    body {
+        font-size: 1.7rem;
+
+    }
+
+    #displayData,
+    #selectionArea,
+    #itemsList {
+        width: 75%;
+    }
+
+    #selectionArea label {
+        font-size: 1.9rem;
+        height: 4rem;
+    }
+
+    #selectionArea input,
+    #selectionArea select {
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+    #addBtn,
+    .delBtn button,
+    .editBtn button {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+
+    .edit-name,
+    .edit-amount,
+    .edit-type {
+        width: 13rem;
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+
+    li:hover .edit-name,
+    .edit-amount,
+    .edit-type {
+        width: 10rem;
+    }
+
+    li:hover .delBtn button,
+    .editBtn button {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width:1440px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    #displayData,
+    #selectionArea,
+    #itemsList {
+        width: 75%;
+    }
+
+    #selectionArea label {
+        font-size: 1.9rem;
+        height: 4rem;
+    }
+
+    #selectionArea input,
+    #selectionArea select {
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+    #addBtn,
+    .delBtn button,
+    .editBtn button {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+
+    #income {
+        width: 15%;
+    }
+
+
+    #expense {
+        width: 15%;
+    }
+
+    #totalDisplay {
+        width: 40%;
+        border-radius: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    #deficit {
+        width: 30%;
+        border-radius: 1.5rem;
+    }
+
+    .edit-name,
+    .edit-amount {
+        margin-top: 1rem;
+    }
+
+
+}
+
+
+@media (max-width:1240px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    #displayData,
+    #selectionArea,
+    #itemsList {
+        width: 75%;
+    }
+
+    #selectionArea label {
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+    #selectionArea input,
+    #selectionArea select {
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+    #addBtn,
+    .delBtn button,
+    .editBtn button {
+        font-size: 2rem;
+        padding: 1.5rem;
+    }
+
+    #income {
+        width: 15%;
+    }
+
+
+    #expense {
+        width: 15%;
+    }
+
+    #totalDisplay {
+        width: 40%;
+        border-radius: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    #deficit {
+        width: 30%;
+        border-radius: 1.5rem;
+    }
+
+    .edit-name,
+    .edit-amount {
+        margin-top: 1rem;
+    }
+
+
+}
+
+@media (max-width:1024px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    #displayData,
+    #selectionArea,
+    #itemsList {
+        width: 75%;
+    }
+
+    #selectionArea label {
+        font-size: 1.7rem;
+        height: 4rem;
+    }
+
+    #selectionArea input,
+    #selectionArea select {
+        font-size: 1.7rem;
+        height: 4rem;
+    }
+
+    #addBtn,
+    .delBtn button,
+    .editBtn button {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    #income {
+        width: 18%;
+    }
+
+    .Data h3 {
+        font-size: 1.3rem;
+    }
+
+
+    #expense {
+        width: 20%;
+    }
+
+    #totalDisplay {
+        width: 30%;
+        border-radius: 1.5rem;
+        margin-right: 1rem;
+        text-align: center;
+    }
+
+    #deficit {
+        width: 30%;
+        border-radius: 1.5rem;
+        text-align: center;
+    }
+
+    .edit-name,
+    .edit-amount {
+        margin-top: 1rem;
+        font-size: 1.7rem;
+    }
+
+    li:hover .edit-name,
+    .edit-amount,
+    .edit-type {
+        width: 8rem;
+    }
+
+    li:hover .delBtn button,
+    .editBtn button {
+        font-size: 1.6rem;
+    }
+}
